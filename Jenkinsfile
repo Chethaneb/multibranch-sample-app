@@ -8,6 +8,14 @@ pipeline {
       steps {
         echo "hello"
       }
-    }     
+    } 
+    stage('fix-branch'){
+      when {
+        branch "fix-123"
+      } 
+      steps{
+        sh "cat README.md"
+      }
+    }    
   }
 } 
