@@ -9,11 +9,9 @@ pipeline {
         echo "hello"
       }
     } 
-    stage('fix-branch'){
-      when {
-        branch "fix-123"
-      } 
+    stage('test456-branch'){
       steps{
+        echo "this is for test branch"
         sh "cat README.md"
       }
     }    
